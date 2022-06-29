@@ -1,0 +1,100 @@
+package com.java.ex;
+
+public class S_06_29_01 {
+
+	public static void main(String[] args) {
+		int result; 
+		int intVar = 10;
+		double pi = 3.14D;
+		
+		
+		result = intVar + (int)pi;
+		
+		System.out.println(result);
+		
+		// 묵시적 형변환 : 작은거에서 큰거로 
+		// 명시적 형변환 : 큰거에서 작은거로(데이터 손실 일어날 수 있음)(괄호를 사용 - 캐스트 연산자)  
+	}
+
+}
+
+package com.java.ex;
+
+public class S_06_29_02 {
+
+	public static void main(String[] args) {
+		int i = 10;
+		int j = 3;
+		int h = 5;
+		
+		System.out.println("=== 실습 연산자 ===");
+		System.out.println("덧셈 : " + (i+j));
+		System.out.println("뺼셈 : " + (i-j));
+		System.out.println("곱셈 : " + (i*j));
+		System.out.println("나눗셈 : " + (i/j));
+		System.out.println("나머지 : " + (i%j));
+		
+		System.out.println("=== 증감 연산자 ===");
+		i++;
+		System.out.println("증가 : " + i);
+		j--;
+		System.out.println("감소 : " + j);
+		
+		System.out.println("=== 비교, 관계 연산자 ===");
+		System.out.println("i==j: " + (i==j));
+		System.out.println("i!=j: " + (i!=j));
+		System.out.println("i>j: " + (i>j));
+		System.out.println("i<j: " + (i<j));
+		
+		System.out.println("=== 논리 연산자 ===");
+		System.out.println("&&(AND) : " + (i>j && i>h));
+		System.out.println("&&(AND) : " + (i>j && i<h));
+		System.out.println("||(OR) : " + (i>j || i>h));
+		System.out.println("||(OR) : " + (i>j || i<h));
+		
+		System.out.println("=== 할당 연산자 ===");
+		System.out.println("h = " + h);
+		h = i;
+		System.out.println("h = " + h);
+		
+		System.out.println("=== 줄여 쓰는 연산자 ===");
+		i = i + 100;
+		System.out.println("i = " + i);
+		i = 11;
+		System.out.println("i = " + i);
+		i += 100;
+		System.out.println("i = " + i);
+		
+		System.out.println("=== 삼항 연산자 ===");
+		int result = h != 5 ? 1 : 2;
+		System.out.println("삼항 연산에 대한 결과(result) : " + result);
+		
+	}
+
+}
+
+
+package com.java.ex;
+
+import java.util.Scanner;
+
+public class S_06_29_03 {
+
+	public static void main(String[] args) {
+		int inputNum;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("정수를 입력해 주세요");
+		inputNum = sc.nextInt();
+		
+		if ((inputNum % 3) == 0) 
+		{
+			System.out.println(" 3 의 배수 입니다 ");
+		} 
+		else 
+		{
+			System.out.println(" 3 의 배수가 아닙니다 ");
+		}
+	}
+
+}
